@@ -1,0 +1,100 @@
+
+calculate_sum.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <calculate_sum>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+   c:	89 75 e4             	mov    %esi,-0x1c(%rbp)
+   f:	89 55 e0             	mov    %edx,-0x20(%rbp)
+  12:	48 c7 45 f8 00 00 00 	movq   $0x0,-0x8(%rbp)
+  19:	00 
+  1a:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%rbp)
+  21:	eb 22                	jmp    45 <calculate_sum+0x45>
+  23:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  26:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+  2d:	00 
+  2e:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  32:	48 01 d0             	add    %rdx,%rax
+  35:	8b 00                	mov    (%rax),%eax
+  37:	39 45 e0             	cmp    %eax,-0x20(%rbp)
+  3a:	7f 05                	jg     41 <calculate_sum+0x41>
+  3c:	48 83 45 f8 01       	addq   $0x1,-0x8(%rbp)
+  41:	83 45 f4 01          	addl   $0x1,-0xc(%rbp)
+  45:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  48:	3b 45 e4             	cmp    -0x1c(%rbp),%eax
+  4b:	72 d6                	jb     23 <calculate_sum+0x23>
+  4d:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  51:	5d                   	pop    %rbp
+  52:	c3                   	retq   
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%rdi)
+   3:	43 3a 20             	rex.XB cmp (%r8),%spl
+   6:	28 55 62             	sub    %dl,0x62(%rbp)
+   9:	75 6e                	jne    79 <calculate_sum+0x79>
+   b:	74 75                	je     82 <calculate_sum+0x82>
+   d:	20 39                	and    %bh,(%rcx)
+   f:	2e 34 2e             	cs xor $0x2e,%al
+  12:	30 2d 31 75 62 75    	xor    %ch,0x75627531(%rip)        # 75627549 <calculate_sum+0x75627549>
+  18:	6e                   	outsb  %ds:(%rsi),(%dx)
+  19:	74 75                	je     90 <calculate_sum+0x90>
+  1b:	31 7e 32             	xor    %edi,0x32(%rsi)
+  1e:	30 2e                	xor    %ch,(%rsi)
+  20:	30 34 2e             	xor    %dh,(%rsi,%rbp,1)
+  23:	31 29                	xor    %ebp,(%rcx)
+  25:	20 39                	and    %bh,(%rcx)
+  27:	2e 34 2e             	cs xor $0x2e,%al
+  2a:	30 00                	xor    %al,(%rax)
+
+Disassembly of section .note.gnu.property:
+
+0000000000000000 <.note.gnu.property>:
+   0:	04 00                	add    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	10 00                	adc    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	05 00 00 00 47       	add    $0x47000000,%eax
+   d:	4e 55                	rex.WRX push %rbp
+   f:	00 02                	add    %al,(%rdx)
+  11:	00 00                	add    %al,(%rax)
+  13:	c0 04 00 00          	rolb   $0x0,(%rax,%rax,1)
+  17:	00 03                	add    %al,(%rbx)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 00                	add    %al,(%rax)
+  1d:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    $0x0,%al
+   2:	00 00                	add    %al,(%rax)
+   4:	00 00                	add    %al,(%rax)
+   6:	00 00                	add    %al,(%rax)
+   8:	01 7a 52             	add    %edi,0x52(%rdx)
+   b:	00 01                	add    %al,(%rcx)
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    %ebx,(%rbx)
+  11:	0c 07                	or     $0x7,%al
+  13:	08 90 01 00 00 1c    	or     %dl,0x1c000001(%rax)
+  19:	00 00                	add    %al,(%rax)
+  1b:	00 1c 00             	add    %bl,(%rax,%rax,1)
+  1e:	00 00                	add    %al,(%rax)
+  20:	00 00                	add    %al,(%rax)
+  22:	00 00                	add    %al,(%rax)
+  24:	53                   	push   %rbx
+  25:	00 00                	add    %al,(%rax)
+  27:	00 00                	add    %al,(%rax)
+  29:	45 0e                	rex.RB (bad) 
+  2b:	10 86 02 43 0d 06    	adc    %al,0x60d4302(%rsi)
+  31:	02 4a 0c             	add    0xc(%rdx),%cl
+  34:	07                   	(bad)  
+  35:	08 00                	or     %al,(%rax)
+	...

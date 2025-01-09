@@ -1,0 +1,65 @@
+config,IC,Cycles,CPI,CycleTime,ET,DL1_Miss_Rate,DL1_MISSES,DL1_ACCESSES
+A_O0,2332222997,469704266,0.201398,0.216834,0.101848,0.000631,735235,1165581955
+
+ Performance counter stats for 'taskset -c 8 ./programmer/madd_A':
+
+          1,873.71 msec task-clock                       #    0.999 CPUs utilized             
+                23      context-switches                 #   12.275 /sec                      
+                 1      cpu-migrations                   #    0.534 /sec                      
+           196,882      page-faults                      #  105.076 K/sec                     
+     3,454,309,323      cpu_atom/cycles/                 #    1.844 GHz                         (0.03%)
+     9,491,266,696      cpu_core/cycles/                 #    5.065 GHz                         (99.44%)
+     3,217,022,598      cpu_atom/instructions/           #    0.93  insn per cycle              (0.03%)
+    16,287,316,811      cpu_core/instructions/           #    4.72  insn per cycle              (99.44%)
+       577,824,500      cpu_atom/branches/               #  308.385 M/sec                       (0.03%)
+     2,519,829,471      cpu_core/branches/               #    1.345 G/sec                       (99.44%)
+        25,195,614      cpu_atom/branch-misses/          #    4.36% of all branches             (0.03%)
+         4,836,008      cpu_core/branch-misses/          #    0.84% of all branches             (99.01%)
+             TopdownL1 (cpu_core)                 #     63.5 %  tma_backend_bound      
+                                                  #      1.2 %  tma_bad_speculation    
+                                                  #      3.9 %  tma_frontend_bound     
+                                                  #     31.4 %  tma_retiring             (99.49%)
+             TopdownL1 (cpu_atom)                 #     42.9 %  tma_bad_speculation    
+                                                  #     23.8 %  tma_retiring             (0.03%)
+                                                  #      0.0 %  tma_backend_bound      
+                                                  #      0.0 %  tma_backend_bound_aux  
+                                                  #     33.2 %  tma_frontend_bound       (0.03%)
+
+       1.874719821 seconds time elapsed
+
+       1.627000000 seconds user
+       0.247152000 seconds sys
+
+
+B_O0,2409861507,3016487401,1.251726,0.217058,0.654753,0.259119,310235509,1197272100
+
+ Performance counter stats for 'taskset -c 8 ./programmer/madd_B':
+
+          2,457.93 msec task-clock                       #    1.000 CPUs utilized             
+                33      context-switches                 #   13.426 /sec                      
+                 1      cpu-migrations                   #    0.407 /sec                      
+           196,885      page-faults                      #   80.102 K/sec                     
+     6,236,282,387      cpu_atom/cycles/                 #    2.537 GHz                         (0.01%)
+    12,488,720,782      cpu_core/cycles/                 #    5.081 GHz                         (97.55%)
+     4,919,890,928      cpu_atom/instructions/           #    0.79  insn per cycle              (0.01%)
+    16,763,820,820      cpu_core/instructions/           #    2.69  insn per cycle              (97.55%)
+       887,423,648      cpu_atom/branches/               #  361.045 M/sec                       (0.01%)
+     2,593,914,431      cpu_core/branches/               #    1.055 G/sec                       (97.55%)
+        48,357,184      cpu_atom/branch-misses/          #    5.45% of all branches             (0.01%)
+         5,076,278      cpu_core/branch-misses/          #    0.57% of all branches             (95.11%)
+             TopdownL1 (cpu_core)                 #     64.2 %  tma_backend_bound      
+                                                  #      1.2 %  tma_bad_speculation    
+                                                  #      3.9 %  tma_frontend_bound     
+                                                  #     30.7 %  tma_retiring             (97.55%)
+             TopdownL1 (cpu_atom)                 #     41.1 %  tma_bad_speculation    
+                                                  #     20.9 %  tma_retiring             (0.01%)
+                                                  #      4.0 %  tma_backend_bound      
+                                                  #      4.0 %  tma_backend_bound_aux  
+                                                  #     34.0 %  tma_frontend_bound       (0.01%)
+
+       2.458770416 seconds time elapsed
+
+       2.156271000 seconds user
+       0.302038000 seconds sys
+
+
