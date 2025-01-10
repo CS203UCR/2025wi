@@ -1,0 +1,6 @@
+type,size,GLOPS,GPU_time,total_time
+float/GPU,16, 0.01, 0.705824, 0.326507
+float/GPU,32, 0.08, 0.773888, 0.310291
+float/GPU,64, 3.71, 0.141248, 0.342714
+float/GPU,128, 21.26, 0.197280, 0.308915
+float/CPU,16, 0.15, 0, 0.000056
